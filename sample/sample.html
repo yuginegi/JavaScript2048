@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>2048 クローン</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="initial-scale=1.0">
+	<link rel="apple-touch-icon" href="home.png">
+
+<!--- https://h-s-hige.hateblo.jp/entry/20190424/1556101185 --->
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+上下左右にスワイプしてみてください。マウスでも、タッチでも。<BR>
+画面サイズは、幅４００か６００の対応です。
+<!--- width="360" height="240" --->
+<div id="wrapper">
+<canvas id="cv1" ></canvas>
+</div>
+
+<P>
+<span id="winsize2"></span>
+</P>
+<P>
+<span id="dbgstr">ｐｐｐ</span>
+</P>
+<!--- 
+  BODY のほうが良い：https://www.sejuku.net/blog/19754
+・「head要素内」にJavaScriptを書くことはできますが、
+  すべての読み込みが完了しないとDOMがレンダリングされないので
+  Webページの表示が遅くなってしまう
+・ポイントはbodyの閉じタグの直前に記述するという点です。
+  先にDOMのレンダリング始まり、Webページが表示された後にJavaScriptが読み込まれる
+--->
+<script type="text/javascript" src="prog.js"></script>
+</body>
+</html>
